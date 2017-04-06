@@ -29,8 +29,15 @@ $(document).ready(function() {
         		return average.toFixed(2);
 
         }
-				//uniqueWords(wordsArray);
-				console.log(averageWordLength(wordsArray));
+				function putItAllTogether() {
+					$('.js-word-count').text(totalWords);
+					$('.js-unique-word-count').text(uniqueWords(wordsArray));
+					$('.js-average-word-length').text(averageWordLength(wordsArray));
+					$('.text-report').removeClass('hidden')
+				}
+
+				putItAllTogether();
+
 
     });
 });
