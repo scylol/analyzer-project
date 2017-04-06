@@ -15,9 +15,22 @@ $(document).ready(function() {
                     comparisonArray.push(comparedArray[i]);
                 }
             }
-            console.log(comparisonArray);
+            return comparisonArray.length;
         }
-				uniqueWords(wordsArray);
+
+        function averageWordLength(averageArray){
+        	let sum = 0;
+        	let average = 0;
+
+        	for(i=0;i<averageArray.length;i++) {
+        		sum += averageArray[i].length;
+        	}
+        		average = sum / averageArray.length;
+        		return average.toFixed(2);
+
+        }
+				//uniqueWords(wordsArray);
+				console.log(averageWordLength(wordsArray));
 
     });
 });
